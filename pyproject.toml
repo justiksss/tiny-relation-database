@@ -1,0 +1,26 @@
+[project]
+name = "tiny-relation-database"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "bcrypt>=5.0.0",
+    "loguru>=0.7.3",
+    "msgpack>=1.1.2",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "ruff>=0.14.3",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+
+[tool.pytest.ini_options]
+markers = [
+    "wal: mark for Write-Ahead-Log test cases"
+]
+
+asyncio_mode="auto"
